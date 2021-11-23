@@ -8,18 +8,34 @@
     <style>
         body {
             background-color: black;
+            z-index: -2;
+            overflow: hidden;
         }
 
 
-        .docs {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-evenly;
+        .docs1 {
+            position: absolute;
+            top: 8vh;
+            left: 16vw;
+            transition: ease-in-out 0.2s;
+        }
+
+        .docs2 {
+            position: absolute;
+            top: 20vh;
+            left: 32vw;
+            transition: ease-in-out 0.2s;
+        }
+
+        .docs3 {
+            position: absolute;
+            top: 32vh;
+            left: 48vw;
+            transition: ease-in-out 0.2s;
         }
 
 
-        p {
+        div {
             font-size: 48px;
             position: relative;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -30,35 +46,52 @@
         a {
             text-decoration: none;
             color: white;
+            transition: ease-in-out 0.2s;
         }
 
-        img:hover {
-            transform: scale(1.15);
-            -ms-transform: scale(1.15); /* IE 9 */
-            -webkit-transform: scale(1.15); /* Safari 3-8 */
-            transition: ease-in-out 0.2s;
+        .docs1:hover, .docs2:hover, .docs3:hover {
+            transform: scale(1.05);
+            -ms-transform: scale(1.05); /* IE 9 */
+            -webkit-transform: scale(1.05); /* Safari 3-8 */
+        }
+
+        @media only screen and (min-width: 800px) {
+            .docs {
+                
+            }
         }
 
     </style>
 </head>
 <body>
 
-    <p style="font-size: 72px;"><b>UX: Redesign Review Platforms</b></p>
+    <div style="z-index: 1; mix-blend-mode: difference; width: 200px; height: 100vh; top: 8vh; left: 90vw;">
+        <pre style="font-size: 42px; transform: rotate(90deg);"><b>UX: Redesign Review Platforms</b></pre>
+    </div>
 
-    <divs class="docs">
-            <a href="./stage1.pdf" target="_blank">
-                <img src="./a.png" width="240px">
-                <p>Stage1</p>
-            </a>
-            <a href="./stage2.pdf" target="_blank">
-                <img src="./b.png" width="240px">
-                <p>Stage2</p>
-            </a>
-            <a href="./stage3-2.pdf" target="_blank">
-                <img src="./c.png" width="240px">
-                <p>Stage3</p>
-            </a>
-    </divs>
+    <div class="docs1">
+        <a href="./stage1.pdf" target="_blank">
+            <img src="./a.png" width="600px">
+            <div style="position: absolute; top: 92%; left: -6%; mix-blend-mode: difference;">Stage1</div>
+            <div style="position: absolute; top: -4%; left: 86%; mix-blend-mode: difference;">Stage1</div>
+        </a>
+    </div>
+
+    <div class="docs2">
+        <a href="./stage2.pdf" target="_blank">
+            <img src="./b.png" width="600px">
+            <div style="position: absolute; top: 92%; left: -6%; mix-blend-mode: difference;">Stage2</div>
+            <div style="position: absolute; top: -4%; left: 86%; mix-blend-mode: difference;">Stage2</div>
+        </a>
+    </div>
+
+    <div class="docs3">
+        <a href="./stage3-2.pdf" target="_blank">
+            <img src="./c.png" width="600px">
+            <div style="position: absolute; top: 92%; left: -6%; mix-blend-mode: difference;">Stage3</div>
+            <div style="position: absolute; top: -4%; left: 86%; mix-blend-mode: difference;">Stage3</div>
+        </a>
+    </div>
     
 </body>
 </html>
